@@ -66,11 +66,11 @@
 			</plugin>
   
     <plugin>    
-        <dependency>
+        
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-compiler-plugin</artifactId>
     <version>3.11.0</version>
-</dependency>
+
 
         <configuration>
             <source>11</source>
