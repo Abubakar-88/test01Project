@@ -22,8 +22,8 @@ public class RemoteTest {
 			String s = driver.findElement(By.xpath("//div//h1['Welcome to MicroTech NA.']")).getText();
 			//assertEquals("Welcome to MicroTech NA.", s);
 		System.out.println("welcom text: "+ s);
-		click(By.xpath("//a[@href=\"elogin.php\"]"));
-		
+		//click(By.xpath("//a[@href=\"elogin.php\"]"));
+		driver.findElement(By.xpath("//a[@href=\"elogin.php\"]")).click();
 		
 		driver.quit();
 		
