@@ -18,10 +18,12 @@ public class RemoteTest {
 		ChromeOptions opt = new ChromeOptions();
 		
 		WebDriver driver = new RemoteWebDriver(new URL("http://3.145.197.131:4444/"),opt);
-		driver.get("http://google.com");
-		driver.findElement(By.name("q")).sendKeys("Hello Grid !!!");
-		System.out.println(driver.getTitle());
-		System.out.println(driver.getTitle());
+		driver.get("https://it.microtechlimited.com/");	
+			String s = driver.findElement(By.xpath("//div//h1['Welcome to MicroTech NA.']")).getText();
+			assertEquals("Welcome to MicroTech NA.", s);
+		System.out.println("welcom text: "+ s)
+		click(By.xpath("//a[@href=\"elogin.php\"]"));
+		
 		
 		driver.quit();
 		
